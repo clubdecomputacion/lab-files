@@ -6,7 +6,7 @@ Este repositorio contiene los archivos binarios, datasets y recursos necesarios 
 
 | Actividad | Archivo | Tamaño | Fecha |
 |:---:|:----|---:|:---:|
-| [Línea de Comandos](https://www.youtube.com/playlist?list=PLdVwAtxG2IU7eOKRqHVLC7DxiozYSICKV) | [`home.zip`](https://github.com/clubdecomputacion/lab-files/releases/download/cli/home.zip) | ~500MB | 2025-09-25 |
+| [Línea de Comandos](https://www.youtube.com/playlist?list=PLdVwAtxG2IU7eOKRqHVLC7DxiozYSICKV) | [`cli/home.txz`](https://github.com/clubdecomputacion/lab-files/releases/download/cli/home.txz) | ~71.1 MB | 2025-09-25 |
 
 ## Descargar con un comando, para usar en un *script*
 
