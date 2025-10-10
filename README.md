@@ -8,6 +8,13 @@ Este repositorio contiene los archivos binarios, datasets y recursos necesarios 
 |:---:|:----|---:|:---:|
 | [Línea de Comandos](https://www.youtube.com/playlist?list=PLdVwAtxG2IU7eOKRqHVLC7DxiozYSICKV) | [`cli/home.txz`](https://github.com/clubdecomputacion/lab-files/releases/download/cli/home.txz) | ~71.1 MB | 2025-09-25 |
 
+### Línea de Comandos
+
+Línea de Comandos es una serie de videos de YouTube para aprender a utilizar la línea de comandos (Linux, Macos o Windows con WSL). Este archivo contiene los directorios y archivos de ejemplo utilizados en la serie.
+
+```bash
+curl -L https://github.com/clubdecomputacion/lab-files/releases/download/cli/home.txz | tar Jxf -
+```
 ## Descargar con un comando, para usar en un *script*
 
 Puedes descargar archivos específicos usando `curl` o `wget`, por ejemplo para descargar archivo `lab1-data.zip` del *release* `v1.0`:
