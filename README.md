@@ -1,21 +1,30 @@
 # Archivos para Actividades
 
-Este repositorio contiene los archivos binarios, datasets y recursos necesarios para los laboratorios, talleres y demás actividades ofrecidos por el [Club de Computación](https://github.com/clubdecomputacion). Los archivos están disponibles como *releases* para facilitar su descarga directa sin necesidad de clonar el repositorio completo.
+Este repositorio contiene los archivos binarios, datasets y recursos necesarios para los laboratorios, talleres, videos y demás actividades ofrecidas por el [Club de Computación](https://github.com/clubdecomputacion). Los archivos están disponibles como *releases* para facilitar su descarga directa sin necesidad de clonar el repositorio completo.
 
 ## Archivos Disponibles
 
 | Actividad | Archivo | Tamaño | Fecha |
 |:---:|:----|---:|:---:|
-| [Línea de Comandos](https://www.youtube.com/playlist?list=PLdVwAtxG2IU7eOKRqHVLC7DxiozYSICKV) | [`cli/home.txz`](https://github.com/clubdecomputacion/lab-files/releases/download/cli/home.txz) | ~71.1 MB | 2025-09-25 |
+| 1. [Línea de Comandos](https://www.youtube.com/playlist?list=PLdVwAtxG2IU7eOKRqHVLC7DxiozYSICKV) | [`cli/home.txz`](https://github.com/clubdecomputacion/lab-files/releases/download/cli/home.txz) | ~71.1 MB | 2025-09-25 |
 
-### Línea de Comandos
+## 1. Línea de Comandos
 
-Línea de Comandos es una serie de videos de YouTube para aprender a utilizar la línea de comandos (Linux, Macos o Windows con WSL). Este archivo contiene los directorios y archivos de ejemplo utilizados en la serie.
+[Línea de Comandos](https://www.youtube.com/playlist?list=PLdVwAtxG2IU7eOKRqHVLC7DxiozYSICKV) es una serie de videos de YouTube para aprender a utilizar la línea de comandos (Linux, Macos o Windows con WSL). Este archivo contiene los directorios y archivos de ejemplo utilizados en la serie. Es un archivo [`tar`](https://tldr.inbrowser.app/pages/common/tar) comprimido con [`xz`](https://tldr.inbrowser.app/pages/common/xz), utiliza el siguiente comando para descargar e instalar:
 
 ```bash
 curl -L https://github.com/clubdecomputacion/lab-files/releases/download/cli/home.txz | tar Jxf -
 ```
-## Descargar con un comando, para usar en un *script*
+
+**Notas**:
+
+- No es necesario clonar este repositorio, solo debes descargar el archivo que necesitas desde _releases_.
+- Los archivos pueden ser grandes, verifica antes de descargar.
+- Algunos navegadores pueden requerir confirmación para descargas grandes.
+
+---
+
+### Descargar con un comando, para usar en un *script*
 
 Puedes descargar archivos específicos usando `curl` o `wget`, por ejemplo para descargar archivo `lab1-data.zip` del *release* `v1.0`:
 
@@ -27,17 +36,9 @@ curl -L -O https://github.com/clubdecomputacion/lab-files/releases/download/v1.0
 wget https://github.com/clubdecomputacion/lab-files/releases/download/v1.0/lab1-data.zip
 ```
 
-## Descargar manual desde la página de *Releases*
+### Descargar manual desde la página de *Releases*
 
-1. Ve a la sección [`Releases`](https://github.com/clubdecomputacion/lab-files/releases) de este repositorio
-2. Encuentra el *release* correspondiente a la actividad que quieres hacer
-3. En la sección `Assets`, haz clic en el archivo que deseas descargar
-
----
-
-**Notas**:
-
-- No es necesario clonar este repositorio, solo debes descargar el archivo que necesitas desde _releases_
-- Los archivos pueden ser grandes, verifica antes de descargar
-- Algunos navegadores pueden requerir confirmación para descargas grandes
+1. Ve a la sección [`Releases`](https://github.com/clubdecomputacion/lab-files/releases) de este repositorio.
+2. Encuentra el *release* correspondiente a la actividad que quieres hacer.
+3. En la sección `Assets`, haz clic en el archivo que deseas descargar.
 
