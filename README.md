@@ -2,27 +2,25 @@
 
 Este repositorio contiene los archivos binarios, datasets y recursos necesarios para los laboratorios, talleres, videos y demás actividades ofrecidas por el [Club de Computación](https://github.com/clubdecomputacion). Los archivos están disponibles como *releases* para facilitar su descarga directa sin necesidad de clonar el repositorio completo.
 
-## Archivos Disponibles
+## 1. Configurar Ubuntu 
 
-| Actividad | Archivo | Tamaño | Fecha |
-|:---:|:----|---:|:---:|
-| 1. [Línea de Comandos](https://www.youtube.com/playlist?list=PLdVwAtxG2IU7eOKRqHVLC7DxiozYSICKV) | [`cli/home.txz`](https://github.com/clubdecomputacion/lab-files/releases/download/cli/home.txz) | ~71.1 MB | 2025-09-25 |
+El documento [Ubuntu Setup](ubuntu_setup.md) contiene los comandos necesarios para configurar Ubuntu como un entorno de aprendizaje para computación.
 
-## 1. Línea de Comandos
+## 2. Archivos de Práctica
 
-[Línea de Comandos](https://www.youtube.com/playlist?list=PLdVwAtxG2IU7eOKRqHVLC7DxiozYSICKV) es una serie de videos de YouTube para aprender a utilizar la línea de comandos (Linux, Macos o Windows con WSL). Este archivo contiene los directorios y archivos de ejemplo utilizados en la serie. Es un archivo [`tar`](https://tldr.inbrowser.app/pages/common/tar) comprimido con [`xz`](https://tldr.inbrowser.app/pages/common/xz), utiliza el siguiente comando para descargar e instalar:
+[Línea de Comandos](https://www.youtube.com/playlist?list=PLdVwAtxG2IU7eOKRqHVLC7DxiozYSICKV) es una serie de videos de YouTube para aprender a utilizar la línea de comandos (Linux, Macos o Windows con WSL). Este archivo contiene los directorios y archivos de ejemplo utilizados en la serie. Es un archivo [`tar`](https://tldr.inbrowser.app/pages/common/tar) comprimido con [`xz`](https://tldr.inbrowser.app/pages/common/xz), utiliza el siguiente comando para descargar (~71.1Mb, 2025-09-25) e instalar:
 
 ```bash
 curl -L https://github.com/clubdecomputacion/lab-files/releases/download/cli/home.txz | tar Jxf -
 ```
+
+---
 
 **Notas**:
 
 - No es necesario clonar este repositorio, solo debes descargar el archivo que necesitas desde _releases_.
 - Los archivos pueden ser grandes, verifica antes de descargar.
 - Algunos navegadores pueden requerir confirmación para descargas grandes.
-
----
 
 ### Descargar con un comando, para usar en un *script*
 
