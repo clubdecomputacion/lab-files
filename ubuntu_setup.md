@@ -6,7 +6,7 @@ Sincroniza la lista de paquetes y sus versiones disponibles en los repositorios 
 Este comando no actualiza el sistema, sino que refresca la caché local de paquetes para que el gestor de paquetes `apt` conozca las últimas versiones y dependencias disponibles. Es el primer paso esencial antes de instalar o actualizar cualquier software.
 
 ```bash
-apt update
+sudo apt update
 ```
 
 ## Actualizar paquetes instalados
@@ -16,7 +16,7 @@ Descarga e instala las versiones más recientes de todos los paquetes que ya est
 La opción `-y` responde automáticamente "sí" a la confirmación de la instalación, lo que permite que el proceso continúe sin intervención manual, algo útil para scripts o configuraciones automáticas.
 
 ```bash
-apt upgrade -y
+sudo apt upgrade -y
 ```
 
 ## Instalar paquetes específicos
@@ -25,10 +25,8 @@ A continuación se presenta una selección de paquetes que proporcionan un entor
 
 Cada grupo satisface necesidades específicas del flujo de trabajo de desarrollo, desde la escritura de código hasta el monitoreo del sistema y la automatización de tareas.
 
-Pueden ser instaladas todas con un solo comando:
-
 ```bash
-apt install -y \
+sudo apt install -y \
     build-essential manpages-dev just \
     python3 python3-pip python3-venv \
     default-jdk default-jre \
@@ -51,163 +49,58 @@ apt install -y \
     socat pv 
 ```
 
-O por grupos, como se explica a continuación:
-
-#### 1. Herramientas de Compilación y Sistemas de Construcción
+#### Paquetes
 
 - **`build-essential`**: Paquete meta que incluye compiladores C/C++ (`gcc`, `g++`), `make` y otras herramientas esenciales para compilar software desde código fuente.
 - **`manpages-dev`**: Páginas del manual para funciones de desarrollo y programación en C.
 - **`just`**: Ejecutor de comandos moderno, similar a `make`, para definir y ejecutar tareas de desarrollo.
-
-```bash
-apt install -y build-essential manpages-dev just
-```
-
-#### 2. Lenguajes de Programación y Entornos de Ejecución
-
 - **Python** (`python3`, `python3-pip`, `python3-venv`): Intérprete Python, gestor de paquetes Pip y módulo para crear entornos virtuales.
 - **Java** (`default-jdk`, `default-jre`): Kit de Desarrollo de Java (JDK) y Entorno de Ejecución (JRE) por defecto.
 - **.NET** (`dotnet-sdk-8.0`, `aspnetcore-runtime-8.0`): SDK de .NET 8.0 y runtime para aplicaciones ASP.NET Core.
 - **Ruby, Lua, Rust, Node.js, Go, PHP**: Intérpretes/compiladores y herramientas básicas para estos lenguajes populares.
-
-```bash
-apt install -y python3 python3-pip python3-venv \
-    default-jdk default-jre \
-    dotnet-sdk-8.0 aspnetcore-runtime-8.0 \
-    ruby lua5.4 \
-    rustc nodejs npm \
-    golang-go \
-    php
-```
-
-#### 3. Clientes para Bases de Datos (CLI)
-
 - **`mycli`**, **`pgcli`**, **`litecli`**: Clientes interactivos con autocompletado y resaltado de sintaxis para MySQL, PostgreSQL y SQLite respectivamente.
-
-```bash
-apt install -y mycli pgcli litecli
-```
-
-#### 4. Utilidades del Sistema y Archivos
-
 - **`ncal`**: Calendario en terminal con formato alternativo.
 - **`zip`**, **`unzip`**, **`rar`**, **`unrar`**: Herramientas para comprimir y descomprimir archivos en formatos ZIP y RAR.
-
-```bash
-apt install -y ncal zip unzip rar unrar
-```
-
-#### 5. Editores de Texto y Visores Hexadecimales
-
 - **Editores variados** (`nano`, `joe`, `ne`, `jed`, `tilde`, `vim`, `neovim`): Ofrece múltiples opciones de editores en terminal para diferentes preferencias.
 - **`hexyl`**: Visor hexadecimal en color, útil para analizar archivos binarios.
-
-```bash
-apt install -y nano joe ne ne-doc jed tilde hexyl vim neovim
-```
-
-#### 6. Control de Versiones y Utilidades del Sistema de Archivos
-
 - **`git`**: Sistema de control de versiones distribuido, esencial para desarrollo colaborativo.
 - **`duf`**: Utilidad para visualizar uso de disco con interfaz amigable.
 - **`direnv`**: Carga variables de entorno automáticamente al entrar en directorios.
 - **`progress`**: Muestra el progreso de comandos en ejecución (cp, mv, dd, etc.).
-
-```bash
-apt install -y git duf direnv progress
-```
-
-#### 7. Shells Mejoradas y Multiplexores de Terminal
-
 - **`zsh`**: Shell poderosa y altamente personalizable (base para frameworks como Oh My Zsh).
 - **`byobu`**: Interfaz mejorada para GNU Screen o Tmux, permitiendo múltiples sesiones en una terminal.
-
-```bash
-apt install -y zsh byobu
-```
-
-#### 8. Alternativas Modernas a Comandos Clásicos
-
 - **`lsd`**, **`eza`**: Reemplazos modernos para `ls` con iconos y mejor formato.
 - **`bat`**: Reemplazo de `cat` con resaltado de sintaxis, numeración y paginación.
 - **`zoxide`**: Reemplazo inteligente de `cd` que aprende los directorios más usados.
-
-```bash
-apt install -y lsd eza bat zoxide
-```
-
-#### 9. Monitoreo del Sistema y Diagnóstico de Red
-
 - **`htop`**, **`btop`**, **`bpytop`**, **`glances`**: Monitores de sistema con interfaces visuales mejoradas.
 - **`gping`**: Herramienta de ping con gráficos en tiempo real.
-
-```bash
-apt install -y htop btop bpytop glances gping
-```
-
-#### 10. Elementos de Diversión y Personalización de Terminal
-
 - **`fortunes`**, **`fortunes-es`**: Muestra frases aleatorias al iniciar sesión.
 - **`figlet`**, **`toilet`**: Crea letras grandes ASCII a partir de texto.
 - **`cowsay`**: Dibuja una vaca (u otros animales) que "dice" un mensaje.
 - **`lolcat`**: Añade arcoíris al texto.
 - **`neofetch`**: Muestra información del sistema con un logo ASCII.
-
-```bash
-apt install -y fortunes fortunes-es figlet toilet cowsay lolcat neofetch
-```
-
-#### 11. Herramientas de Búsqueda y Navegación Avanzadas
-
 - **`tldr`**: Páginas de ayuda simplificadas con ejemplos prácticos.
 - **`hstr`**: Historial de comandos interactivo y buscable.
 - **`fzf`**, **`fd-find`**, **`fdclone`**, **`ripgrep`**: Herramientas de búsqueda rápidas y eficientes.
 - **`jq`**: Procesador de JSON desde línea de comandos.
-
-```bash
-apt install -y tldr hstr fzf fd-find fdclone ripgrep jq
-```
-
-#### 12. Utilidades de Red y Clientes HTTP
-
 - **`wget`**, **`curl`**: Descargadores de contenido web.
 - **`httpie`**: Cliente HTTP amigable con sintaxis simple.
-
-```bash
-apt install -y wget httpie curl
-```
-
-#### 13. Herramientas de Administración y Productividad
-
 - **`mc`**: Administrador de archivos en modo texto (Midnight Commander).
 - **`khal`**: Calendario y agenda en terminal.
 - **`miller`**: Procesador de datos tipo CSV/JSON/XML similar a awk/sed.
-
-```bash
-apt install -y mc khal miller
-```
-
-#### 14. Utilidades de Red Avanzadas y Procesamiento de Datos
-
 - **`socat`**: Herramienta multipropósito de red (similar a netcat pero más potente).
 - **`pv`**: Monitor de progreso para tuberías de datos.
 
-```bash
-apt install -y socat pv
-```
-
 ## Agregar repositorio externo (PPA) e instalar herramienta
 
-Primero agrega un PPA (Personal Package Archive) externo, en este caso [OneFetch](https://onefetch.dev), a la lista de fuentes de software del sistema usando `add-apt-repository`. Esto permite instalar paquetes que no están en los repositorios oficiales de Ubuntu o que requieren una versión más reciente. 
+Primero agrega el PPA (Personal Package Archive) de [OneFetch](https://onefetch.dev) a la lista de fuentes de software del sistema, y luego instala la aplicación:
 
 ```bash
-add-apt-repository ppa:o2sh/onefetch
+sudo add-apt-repository ppa:o2sh/onefetch
 ```
 
-Luego, `apt install` instala la aplicación desde este nuevo repositorio. [OneFetch](https://onefetch.dev) es una herramienta de línea de comandos que muestra información de un repositorio **Git** directamente en la terminal.
-
 ```bash
-apt install -y onefetch 
+sudo apt install -y onefetch 
 ```
 
 ## Eliminar paquetes innecesarios.
@@ -234,13 +127,17 @@ apt autoclean
 
 Estos comandos instalan herramientas que no están disponibles en los repositorios oficiales de **Ubuntu** o que requieren versiones más recientes. Se descargan directamente desde sus fuentes oficiales y se instalan manualmente.
 
-En su mayoría se instalan como `root` en `/usr/local/bin`:
+```bash
+sudo su -
+```
 
-**Nota**: Es necesario revisar y ajustar propietario y permisos.
+```bash
+cd /usr/local/bin
+```
 
-#### **croc - Transferencia segura de archivos entre computadoras**
+#### **croc - Transferencia segura de archivos entre computadores**
 
-Descarga y ejecuta el script de instalación de **croc**, una herramienta de línea de comandos que permite transferir archivos de forma sencilla y segura entre computadoras usando un código de par. Es especialmente útil para estudiantes que necesitan compartir proyectos o archivos de configuración sin depender de servicios en la nube.
+Descarga y ejecuta el script de instalación de **croc**, una herramienta de línea de comandos que permite transferir archivos de forma sencilla y segura entre computadores usando un código de par. Es especialmente útil para estudiantes que necesitan compartir proyectos o archivos de configuración sin depender de servicios en la nube.
 
 ```bash
 curl https://getcroc.schollz.com | bash
@@ -278,13 +175,20 @@ Descarga el cliente de **cht.sh**, un servicio que proporciona ejemplos de códi
 curl -s https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh
 ```
 
+```bash
+chmod +x cht.sh
+```
+
 #### **bottom - Monitor de sistema con interfaz gráfica en terminal**
 
 Descarga e instala **bottom** (btm), un monitor de recursos del sistema (CPU, memoria, disco, red, procesos) con una interfaz moderna y personalizable. Ofrece visualizaciones que facilitan entender el rendimiento del sistema.
 
 ```bash
-curl -LO https://github.com/ClementTsang/bottom/releases/download/0.11.1/bottom_0.11.1-1_amd64.deb
-sudo dpkg -i bottom_0.11.1-1_amd64.deb
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.12.3/bottom_0.12.3-1_amd64.deb
+```
+
+```bash
+dpkg -i bottom_0.12.3-1_amd64.deb
 ```
 
 #### **pandoc - Conversor universal de formatos de documentos**
@@ -292,8 +196,11 @@ sudo dpkg -i bottom_0.11.1-1_amd64.deb
 Instala **pandoc**, una herramienta indispensable para convertir documentos entre múltiples formatos (Markdown, HTML, PDF, LaTeX, Word, etc.). Útil para estudiantes que necesitan generar documentación, informes o presentaciones desde archivos de texto plano.
 
 ```bash
-curl -LO https://github.com/jgm/pandoc/releases/download/3.8.2/pandoc-3.8.2-1-amd64.deb
-sudo dpkg -i pandoc-3.8.2-1-amd64.deb
+curl -LO https://github.com/jgm/pandoc/releases/download/3.9/pandoc-3.9-1-amd64.deb
+```
+
+```bash
+dpkg -i pandoc-3.9-1-amd64.deb
 ```
 
 #### **fastfetch - Información del sistema minimalista y rápida**
@@ -301,8 +208,8 @@ sudo dpkg -i pandoc-3.8.2-1-amd64.deb
 Instala **fastfetch**, una alternativa más rápida y configurable a neofetch para mostrar información del sistema con logos ASCII. Ligero y altamente personalizable para mostrar solo la información que realmente importa.
 
 ```bash
-curl -LO https://github.com/fastfetch-cli/fastfetch/releases/download/2.53.0/fastfetch-linux-amd64.deb
-sudo dpkg -i fastfetch-linux-amd64.deb
+curl -LO https://github.com/fastfetch-cli/fastfetch/releases/download/2.59.0/fastfetch-linux-amd64.deb
+dpkg -i fastfetch-linux-amd64.deb
 ```
 
 #### **zellij - Multiplexor de terminal moderno con paneles y pestañas**
@@ -327,6 +234,12 @@ Descarga y extrae **usql**, un cliente de bases de datos que funciona con múlti
 
 ```bash
 curl -L https://github.com/xo/usql/releases/download/v0.19.26/usql-0.19.26-linux-amd64.tar.bz2 | tar jxvf -
+```
+#### Eliminar archivos de instalación
+
+```bash
+rm *.deb README* LICENSE*
+exit
 ```
 
 ## Personalizar neofetch con Formato SIXEL
