@@ -61,7 +61,7 @@ sudo apt install -y \
 - **`mycli`**, **`pgcli`**, **`litecli`**: Clientes interactivos con autocompletado y resaltado de sintaxis para MySQL, PostgreSQL y SQLite respectivamente.
 - **`ncal`**: Calendario en terminal con formato alternativo.
 - **`zip`**, **`unzip`**, **`rar`**, **`unrar`**: Herramientas para comprimir y descomprimir archivos en formatos ZIP y RAR.
-- **Editores variados** (`nano`, `joe`, `ne`, `jed`, `tilde`, `vim`, `neovim`): Ofrece múltiples opciones de editores en terminal para diferentes preferencias.
+- **`nano`**, **`joe`**, **`ne`**, **`jed`**, **`tilde`**, **`vim`**, **`neovim`**: Ofrece múltiples opciones de editores en terminal para diferentes preferencias.
 - **`hexyl`**: Visor hexadecimal en color, útil para analizar archivos binarios.
 - **`git`**: Sistema de control de versiones distribuido, esencial para desarrollo colaborativo.
 - **`duf`**: Utilidad para visualizar uso de disco con interfaz amigable.
@@ -209,6 +209,9 @@ Instala **fastfetch**, una alternativa más rápida y configurable a neofetch pa
 
 ```bash
 curl -LO https://github.com/fastfetch-cli/fastfetch/releases/download/2.59.0/fastfetch-linux-amd64.deb
+```
+
+```bash
 dpkg -i fastfetch-linux-amd64.deb
 ```
 
