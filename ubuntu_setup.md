@@ -46,7 +46,7 @@ sudo apt install -y \
     tldr hstr fzf fd-find fdclone ripgrep jq \
     wget httpie curl \
     mc khal miller \
-    socat pv 
+    socat pv stress-ng
 ```
 
 #### Paquetes
@@ -90,6 +90,7 @@ sudo apt install -y \
 - **`miller`**: Procesador de datos tipo CSV/JSON/XML similar a awk/sed.
 - **`socat`**: Herramienta multipropósito de red (similar a netcat pero más potente).
 - **`pv`**: Monitor de progreso para tuberías de datos.
+- **`stress-ng`**: Herramienta avanzada para someter el sistema a estrés (CPU, memoria, disco, red, etc.) y realizar pruebas de estabilidad, resistencia y benchmarking.
 
 ## Agregar repositorio externo (PPA) e instalar herramienta
 
@@ -181,7 +182,7 @@ chmod +x cht.sh
 
 #### **bottom - Monitor de sistema con interfaz gráfica en terminal**
 
-Descarga e instala **bottom** (btm), un monitor de recursos del sistema (CPU, memoria, disco, red, procesos) con una interfaz moderna y personalizable. Ofrece visualizaciones que facilitan entender el rendimiento del sistema.
+Descarga e instala **bottom** (`btm`), un monitor de recursos del sistema (CPU, memoria, disco, red, procesos) con una interfaz moderna y personalizable. Ofrece visualizaciones que facilitan entender el rendimiento del sistema.
 
 ```bash
 curl -LO https://github.com/ClementTsang/bottom/releases/download/0.12.3/bottom_0.12.3-1_amd64.deb
