@@ -152,7 +152,7 @@ Instala **micro**, un editor de texto intuitivo y fácil de usar para la termina
 curl -L https://getmic.ro | bash
 ```
 
-#### **starship - Prompt de terminal personalizable y minimalista**
+#### **Starship - Prompt de terminal personalizable y minimalista**
 
 Instala **starship**, un prompt de terminal altamente personalizable, rápido y que muestra información contextual relevante (rama de Git, versión de Python/Node, etc.). Mejora la experiencia en terminal mostrando solo la información necesaria según el directorio actual.
 
@@ -160,7 +160,15 @@ Instala **starship**, un prompt de terminal altamente personalizable, rápido y 
 curl -sS https://starship.rs/install.sh | sh
 ```
 
-#### **mcfly - Reemplazo inteligente del historial de comandos**
+#### **Oh My Posh - Prompt de shell personalizable para cualquier terminal**
+
+Configura **Oh My Posh**, un motor de prompts para shells que te permite personalizar por completo la apariencia de tu terminal. Muestra información contextual como rama Git, estado de comandos, versiones de lenguajes y más, con soporte para temas y colores en PowerShell, bash, zsh y otros.
+
+```bash
+curl -s https://ohmyposh.dev/install.sh | bash -s -- -d /usr/local/bin
+```
+
+#### **McFly - Reemplazo inteligente del historial de comandos**
 
 Instala **mcfly**, que reemplaza el historial de comandos tradicional (`history`) con una interfaz de búsqueda tipo "fuzzy finder" y sugerencias inteligentes basadas en frecuencia y relevancia. Aprende de tus comandos más usados para hacer la navegación más eficiente.
 
