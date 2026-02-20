@@ -39,7 +39,7 @@ sudo apt install -y \
     ncal zip unzip rar unrar \
     nano joe ne ne-doc jed tilde hexyl vim neovim \
     git duf direnv progress \
-    zsh byobu \
+    zsh byobu tree \
     lsd eza bat zoxide \
     htop btop bpytop glances gping \
     fortunes fortunes-es figlet toilet cowsay lolcat neofetch \
@@ -69,6 +69,7 @@ sudo apt install -y \
 - **`progress`**: Muestra el progreso de comandos en ejecución (cp, mv, dd, etc.).
 - **`zsh`**: Shell poderosa y altamente personalizable (base para frameworks como Oh My Zsh).
 - **`byobu`**: Interfaz mejorada para GNU Screen o Tmux, permitiendo múltiples sesiones en una terminal.
+- **`tree`**: Muestra el árbol de directorios/archivos.
 - **`lsd`**, **`eza`**: Reemplazos modernos para `ls` con iconos y mejor formato.
 - **`bat`**: Reemplazo de `cat` con resaltado de sintaxis, numeración y paginación.
 - **`zoxide`**: Reemplazo inteligente de `cd` que aprende los directorios más usados.
@@ -111,7 +112,7 @@ Elimina automáticamente los paquetes que fueron instalados como dependencias de
 Este comando es una buena práctica de mantenimiento del sistema, ya que libera espacio en disco y mantiene el entorno limpio. Nota importante: Pide confirmación antes de proceder, por lo que es seguro ejecutarlo.
 
 ```bash
-apt autoremove
+sudo apt autoremove
 ```
 
 ## Limpiar caché de paquetes obsoletos.
@@ -121,7 +122,7 @@ Elimina los archivos de paquetes `.deb` descargados que están almacenados en la
 A diferencia de `apt clean` que borra toda la caché, este comando es más conservador y solo elimina lo que es definitivamente innecesario, liberando espacio en disco sin afectar la capacidad de reinstalar versiones actuales de los paquetes.
 
 ```bash
-apt autoclean
+sudo apt autoclean
 ```
 
 ## Instalación Manual de Herramientas Adicionales
