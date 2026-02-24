@@ -38,7 +38,7 @@ sudo apt install -y \
     mycli pgcli litecli \
     ncal zip unzip rar unrar \
     nano joe ne ne-doc jed tilde hexyl vim neovim \
-    git duf direnv progress \
+    git gh duf direnv progress \
     zsh byobu tree \
     lsd eza bat zoxide \
     htop btop bpytop glances gping \
@@ -64,6 +64,7 @@ sudo apt install -y \
 - **`nano`**, **`joe`**, **`ne`**, **`jed`**, **`tilde`**, **`vim`**, **`neovim`**: Ofrece múltiples opciones de editores en terminal para diferentes preferencias.
 - **`hexyl`**: Visor hexadecimal en color, útil para analizar archivos binarios.
 - **`git`**: Sistema de control de versiones distribuido, esencial para desarrollo colaborativo.
+- **`gh`**: CLI de GitHub para gestionar los repositorios desde la línea de comandos.
 - **`duf`**: Utilidad para visualizar uso de disco con interfaz amigable.
 - **`direnv`**: Carga variables de entorno automáticamente al entrar en directorios.
 - **`progress`**: Muestra el progreso de comandos en ejecución (cp, mv, dd, etc.).
