@@ -8,7 +8,7 @@ El documento [Ubuntu Setup](ubuntu_setup.md) contiene los comandos necesarios pa
 
 ## 2. Archivos de Práctica
 
-[Línea de Comandos](https://www.youtube.com/playlist?list=PLdVwAtxG2IU7eOKRqHVLC7DxiozYSICKV) es una serie de videos de YouTube para aprender a utilizar la línea de comandos (Linux, Macos o Windows con WSL). Este archivo contiene los directorios y archivos de ejemplo utilizados en la serie. Es un archivo [`tar`](https://tldr.inbrowser.app/pages/common/tar) comprimido con [`xz`](https://tldr.inbrowser.app/pages/common/xz), utiliza el siguiente comando para descargar (~71.1Mb, 2025-09-25) e instalar:
+[Línea de Comandos](https://www.youtube.com/playlist?list=PLdVwAtxG2IU7eOKRqHVLC7DxiozYSICKV) es una serie de videos de YouTube para aprender a utilizar la línea de comandos (Linux, Macos o Windows con WSL). Este archivo contiene los directorios y archivos de ejemplo utilizados en la serie. Es un archivo [`tar`](https://tldr.inbrowser.app/pages/common/tar) comprimido con [`xz`](https://tldr.inbrowser.app/pages/common/xz), utiliza el siguiente comando para descargar (~70Mb, 2026-03-01) e instalar:
 
 ```bash
 curl -L https://github.com/clubdecomputacion/lab-files/releases/download/cli/home.txz | tar Jxf -
@@ -16,23 +16,11 @@ curl -L https://github.com/clubdecomputacion/lab-files/releases/download/cli/hom
 
 ---
 
-**Notas**:
+## Notas
 
 - No es necesario clonar este repositorio, solo debes descargar el archivo que necesitas desde _releases_.
 - Los archivos pueden ser grandes, verifica antes de descargar.
 - Algunos navegadores pueden requerir confirmación para descargas grandes.
-
-### Descargar con un comando, para usar en un *script*
-
-Puedes descargar archivos específicos usando `curl` o `wget`, por ejemplo para descargar archivo `lab1-data.zip` del *release* `v1.0`:
-
-```bash
-curl -L -O https://github.com/clubdecomputacion/lab-files/releases/download/v1.0/lab1-data.zip
-```
-
-```bash
-wget https://github.com/clubdecomputacion/lab-files/releases/download/v1.0/lab1-data.zip
-```
 
 ### Descargar manual desde la página de *Releases*
 

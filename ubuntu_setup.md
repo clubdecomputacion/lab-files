@@ -30,7 +30,7 @@ sudo apt install -y \
     build-essential manpages-dev just \
     python3 python3-pip python3-venv \
     default-jdk default-jre \
-    dotnet-sdk-8.0 aspnetcore-runtime-8.0 \
+    dotnet-sdk-10.0 aspnetcore-runtime-10.0 \
     ruby lua5.4 \
     rustc nodejs npm \
     golang-go \
@@ -49,50 +49,69 @@ sudo apt install -y \
     socat pv stress-ng
 ```
 
+```bash
+sudo snap install kotlin --classic
+```
+
 #### Paquetes
 
-- **`build-essential`**: Paquete meta que incluye compiladores C/C++ (`gcc`, `g++`), `make` y otras herramientas esenciales para compilar software desde código fuente.
-- **`manpages-dev`**: Páginas del manual para funciones de desarrollo y programación en C.
-- **`just`**: Ejecutor de comandos moderno, similar a `make`, para definir y ejecutar tareas de desarrollo.
-- **Python** (`python3`, `python3-pip`, `python3-venv`): Intérprete Python, gestor de paquetes Pip y módulo para crear entornos virtuales.
-- **Java** (`default-jdk`, `default-jre`): Kit de Desarrollo de Java (JDK) y Entorno de Ejecución (JRE) por defecto.
-- **.NET** (`dotnet-sdk-8.0`, `aspnetcore-runtime-8.0`): SDK de .NET 8.0 y runtime para aplicaciones ASP.NET Core.
-- **Ruby, Lua, Rust, Node.js, Go, PHP**: Intérpretes/compiladores y herramientas básicas para estos lenguajes populares.
-- **`mycli`**, **`pgcli`**, **`litecli`**: Clientes interactivos con autocompletado y resaltado de sintaxis para MySQL, PostgreSQL y SQLite respectivamente.
-- **`ncal`**: Calendario en terminal con formato alternativo.
-- **`zip`**, **`unzip`**, **`rar`**, **`unrar`**: Herramientas para comprimir y descomprimir archivos en formatos ZIP y RAR.
-- **`nano`**, **`joe`**, **`ne`**, **`jed`**, **`tilde`**, **`vim`**, **`neovim`**: Ofrece múltiples opciones de editores en terminal para diferentes preferencias.
-- **`hexyl`**: Visor hexadecimal en color, útil para analizar archivos binarios.
-- **`git`**: Sistema de control de versiones distribuido, esencial para desarrollo colaborativo.
-- **`gh`**: CLI de GitHub para gestionar los repositorios desde la línea de comandos.
-- **`duf`**: Utilidad para visualizar uso de disco con interfaz amigable.
-- **`direnv`**: Carga variables de entorno automáticamente al entrar en directorios.
-- **`progress`**: Muestra el progreso de comandos en ejecución (cp, mv, dd, etc.).
-- **`zsh`**: Shell poderosa y altamente personalizable (base para frameworks como Oh My Zsh).
-- **`byobu`**: Interfaz mejorada para GNU Screen o Tmux, permitiendo múltiples sesiones en una terminal.
-- **`tree`**: Muestra el árbol de directorios/archivos.
-- **`lsd`**, **`eza`**: Reemplazos modernos para `ls` con iconos y mejor formato.
-- **`bat`**: Reemplazo de `cat` con resaltado de sintaxis, numeración y paginación.
-- **`zoxide`**: Reemplazo inteligente de `cd` que aprende los directorios más usados.
-- **`htop`**, **`btop`**, **`bpytop`**, **`glances`**: Monitores de sistema con interfaces visuales mejoradas.
-- **`gping`**: Herramienta de ping con gráficos en tiempo real.
-- **`fortunes`**, **`fortunes-es`**: Muestra frases aleatorias al iniciar sesión.
-- **`figlet`**, **`toilet`**: Crea letras grandes ASCII a partir de texto.
-- **`cowsay`**: Dibuja una vaca (u otros animales) que "dice" un mensaje.
-- **`lolcat`**: Añade arcoíris al texto.
-- **`neofetch`**: Muestra información del sistema con un logo ASCII.
-- **`tldr`**: Páginas de ayuda simplificadas con ejemplos prácticos.
-- **`hstr`**: Historial de comandos interactivo y buscable.
-- **`fzf`**, **`fd-find`**, **`fdclone`**, **`ripgrep`**: Herramientas de búsqueda rápidas y eficientes.
-- **`jq`**: Procesador de JSON desde línea de comandos.
-- **`wget`**, **`curl`**: Descargadores de contenido web.
-- **`httpie`**: Cliente HTTP amigable con sintaxis simple.
-- **`mc`**: Administrador de archivos en modo texto (Midnight Commander).
-- **`khal`**: Calendario y agenda en terminal.
-- **`miller`**: Procesador de datos tipo CSV/JSON/XML similar a awk/sed.
-- **`socat`**: Herramienta multipropósito de red (similar a netcat pero más potente).
-- **`pv`**: Monitor de progreso para tuberías de datos.
-- **`stress-ng`**: Herramienta avanzada para someter el sistema a estrés (CPU, memoria, disco, red, etc.) y realizar pruebas de estabilidad, resistencia y benchmarking.
+- **build-essential**: Paquete meta que incluye compiladores [C](https://informatica.uv.es/estguia/ATD/apuntes/laboratorio/Lenguaje-C.pdf)/[C++](https://www4.ujaen.es/~fmartin/apuntesC++.pdf) (`gcc`, `g++`), [`make`](https://makefiletutorial.com/) y otras herramientas esenciales para compilar software desde código fuente.
+- **manpages-dev**: Páginas del manual para funciones de desarrollo y programación en C.
+- [just](https://just.systems/man/en/): Ejecutor de comandos moderno, similar a `make`, para definir y ejecutar tareas de desarrollo.
+- Intérprete [Python](https://www.python.org) `python3`, gestor de paquetes [Pip](https://pip.pypa.io/en/stable/) `python3-pip` y módulo para crear [entornos virtuales](https://docs.python.org/es/3.12/library/venv.html) `python3-venv`.
+- Kit de Desarrollo de Java [JDK](https://openjdk.org/projects/jdk/) `default-jdk` y Entorno de Ejecución (JRE) `default-jre` por defecto.
+- [Kotlin](https://kotlinlang.org/docs/home.html): 
+- [SDK de .NET 10.0](https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet10&pivots=os-linux-ubuntu-2404) `dotnet-sdk-10.0` y runtime para aplicaciones ASP.NET Core `aspnetcore-runtime-10.0`.
+- [Ruby](https://www.ruby-lang.org/es/documentation/): Lenguaje dinámico y orientado a objetos, diseñado para la productividad y elegancia del código. Popular gracias a Rails, su framework web insignia.
+- [Lua](https://www.lua.org/docs.html): Lenguaje ligero y embebible, ampliamente usado en videojuegos y como motor de scripting en aplicaciones. Destaca por su simplicidad y rendimiento.
+- [Rust](https://rust-lang.org/learn/): Lenguaje de sistemas enfocado en seguridad de memoria y concurrencia sin garbage collector. Elegido varios años seguidos como el lenguaje más querido por los desarrolladores.
+- [Node.js](https://nodejs.org/docs/latest/api/): Entorno de ejecución de JavaScript del lado del servidor, basado en el motor V8 de Chrome. Ideal para aplicaciones en tiempo real y APIs de alto rendimiento.
+- [Go](https://go.dev/doc/): Lenguaje compilado desarrollado por Google, diseñado para simplicidad, rendimiento y concurrencia nativa. Muy usado en infraestructura, CLI tools y microservicios.
+- [PHP](https://www.php.net/docs.php): Lenguaje de scripting del lado del servidor que impulsa gran parte de la web, incluyendo WordPress. Ha evolucionado considerablemente en sus versiones modernas (8.x).
+- [Kotlin](https://kotlinlang.org/docs/home.html): Lenguaje moderno de la JVM desarrollado por JetBrains, totalmente interoperable con Java. Es el lenguaje oficial para el desarrollo Android y destaca por su concisión y seguridad frente a nulos.
+- [mycli](https://mycli.net/): Cliente de terminal para MySQL y MariaDB con autocompletado inteligente, resaltado de sintaxis y soporte para múltiples formatos de salida. Una alternativa moderna al cliente oficial `mysql`.
+- [pgcli](https://pgcli.com/): Cliente de terminal para PostgreSQL con autocompletado contextual (tablas, columnas, funciones) y resaltado de sintaxis. Construido sobre la misma base que mycli.
+- [litecli](https://litecli.com/): Cliente de terminal para SQLite con autocompletado, resaltado de sintaxis y navegación cómoda.
+- [ncal](https://manpages.ubuntu.com/manpages/noble/man1/cal.1.html): Muestra el Calendario en la terminal.
+- [zip/unzip](https://infozip.sourceforge.net/), [rar/unrar](https://manpages.ubuntu.com/manpages/noble/man1/unrar-nonfree.1.html): Herramientas para comprimir y descomprimir archivos en formatos ZIP y RAR.
+- [nano](https://www.nano-editor.org/): Editor de texto minimalista para la terminal, conocido por su facilidad de uso y curva de aprendizaje casi nula. Viene preinstalado en la mayoría de distribuciones Linux.
+- [joe](https://joe-editor.sourceforge.io/): Editor de terminal con atajos de teclado similares a WordStar. Ligero y configurable, popular en los años 90.
+- [ne](https://ne.di.unimi.it/): *Nice Editor*, un editor de terminal potente pero sencillo, diseñado como alternativa más amigable a vi, con soporte para Unicode y grabación de macros.
+- [jed](https://www.jedsoft.org/jed/): Editor extensible mediante el lenguaje S-Lang, con modos específicos para programación y una interfaz que recuerda a Emacs. Muy ligero.
+- [tilde](https://os.ghalkes.nl/tilde/): Editor de terminal con una experiencia similar a los editores gráficos modernos (atajos tipo Ctrl+S, Ctrl+C), pensado para usuarios poco familiarizados con la terminal.
+- [vim](https://www.vim.org/): Editor modal legendario, evolución de vi. Extremadamente eficiente una vez dominado, con un ecosistema enorme de plugins y una comunidad muy activa.
+- [neovim](https://neovim.io/): Fork moderno de Vim orientado a la extensibilidad, con soporte nativo para LSP, Lua como lenguaje de configuración y una arquitectura más limpia y mantenible.
+- [hexyl](https://github.com/sharkdp/hexyl): Visor hexadecimal en color, útil para analizar archivos binarios.
+- [git](https://git-scm.com/book/es/v2): Sistema de control de versiones distribuido, esencial para desarrollo colaborativo.
+- [gh](https://cli.github.com/): CLI de [GitHub](https://github.com/) para gestionar los repositorios desde la línea de comandos.
+- [duf](https://github.com/muesli/duf): Utilidad para visualizar uso de disco con interfaz amigable.
+- [direnv](https://direnv.net/): Carga variables de entorno automáticamente al entrar en directorios.
+- [progress](https://github.com/Xfennec/progress): Muestra el progreso de comandos en ejecución (cp, mv, dd, etc.).
+- [zsh](https://www.zsh.org/): Shell poderosa y altamente personalizable (base para frameworks como Oh My Zsh).
+- [byobu](https://www.byobu.org/): Interfaz mejorada para GNU Screen o Tmux, permitiendo múltiples sesiones en una terminal.
+- [tree](https://linux.die.net/man/1/tree): Muestra el árbol de directorios/archivos.
+- [lsd](https://github.com/lsd-rs/lsd), [eza](https://eza.rocks/): Reemplazos modernos para `ls` con iconos y mejor formato.
+- [bat](https://github.com/sharkdp/bat): Reemplazo de `cat` con resaltado de sintaxis, numeración y paginación.
+- [zoxide](https://github.com/ajeetdsouza/zoxide): Reemplazo inteligente de `cd` que aprende los directorios más usados.
+- [htop](https://htop.dev/), [btop](https://github.com/aristocratos/btop), [bpytop](https://github.com/aristocratos/bpytop), [glances](https://nicolargo.github.io/glances/): Monitores de sistema con interfaces visuales mejoradas.
+- [gping](https://github.com/orf/gping): Herramienta de ping con gráficos en tiempo real.
+- [fortunes](https://en.wikipedia.org/wiki/Fortune_(Unix)), fortunes-es: Muestra frases aleatorias al iniciar sesión.
+- [figlet](https://www.figlet.org/), [toilet](https://github.com/cacalabs/toilet): Crea letras grandes ASCII a partir de texto.
+- [cowsay](https://github.com/sckott/cowsay): Dibuja una vaca (u otros animales) que "dice" un mensaje.
+- [lolcat](https://github.com/busyloop/lolcat/): Añade arcoíris al texto.
+- [neofetch](https://github.com/dylanaraps/neofetch): Muestra información del sistema con un logo ASCII.
+- [tldr](https://tldr.sh/): Páginas de ayuda simplificadas con ejemplos prácticos.
+- [hstr](https://github.com/dvorka/hstr): Historial de comandos interactivo y buscable.
+- [fzf](https://github.com/junegunn/fzf), [fd-find](https://github.com/sharkdp/fd), [fdclone](https://github.com/knu/FDclone), [ripgrep](https://github.com/BurntSushi/ripgrep): Herramientas de búsqueda rápidas y eficientes.
+- [jq](https://jqlang.org/): Procesador de JSON desde línea de comandos.
+- [wget](https://www.gnu.org/software/wget/), [curl](https://curl.se/): Descargadores de contenido web.
+- [httpie](https://httpie.io/): Cliente HTTP amigable con sintaxis simple.
+- [mc](https://midnight-commander.org/): Administrador de archivos en modo texto (Midnight Commander).
+- [khal](https://khal.readthedocs.io/en/latest/): Calendario y agenda en terminal.
+- [miller](https://miller.readthedocs.io/en/main/): Procesador de datos tipo CSV/JSON/XML similar a awk/sed.
+- [socat](https://github.com/lilydjwg/socat): Herramienta multipropósito de red (similar a netcat pero más potente).
+- [pv](https://github.com/icetee/pv): Monitor de progreso para tuberías de datos.
+- [stress-ng](https://github.com/ColinIanKing/stress-ng): Herramienta avanzada para someter el sistema a estrés (CPU, memoria, disco, red, etc.) y realizar pruebas de estabilidad, resistencia y benchmarking.
 
 ## Agregar repositorio externo (PPA) e instalar herramienta
 
@@ -138,7 +157,7 @@ sudo su -
 cd /usr/local/bin
 ```
 
-#### **croc - Transferencia segura de archivos entre computadores**
+#### [croc](https://infinitedigits.co/croc/) - Transferencia segura de archivos entre computadores
 
 Descarga y ejecuta el script de instalación de **croc**, una herramienta de línea de comandos que permite transferir archivos de forma sencilla y segura entre computadores usando un código de par. Es especialmente útil para estudiantes que necesitan compartir proyectos o archivos de configuración sin depender de servicios en la nube.
 
@@ -146,7 +165,7 @@ Descarga y ejecuta el script de instalación de **croc**, una herramienta de lí
 curl https://getcroc.schollz.com | bash
 ```
 
-#### **micro - Editor de texto moderno para terminal**
+#### [micro](https://micro-editor.github.io/) - Editor de texto moderno para terminal
 
 Instala **micro**, un editor de texto intuitivo y fácil de usar para la terminal, con atajos de teclado similares a editores gráficos (Ctrl+S para guardar, Ctrl+Q para salir). Ideal para estudiantes que están comenzando y encuentran otros editores demasiado complejos.
 
@@ -154,7 +173,7 @@ Instala **micro**, un editor de texto intuitivo y fácil de usar para la termina
 curl -L https://getmic.ro | bash
 ```
 
-#### **Starship - Prompt de terminal personalizable y minimalista**
+#### [Starship](https://starship.rs/) - Prompt de terminal personalizable y minimalista
 
 Instala **starship**, un prompt de terminal altamente personalizable, rápido y que muestra información contextual relevante (rama de Git, versión de Python/Node, etc.). Mejora la experiencia en terminal mostrando solo la información necesaria según el directorio actual.
 
@@ -162,7 +181,7 @@ Instala **starship**, un prompt de terminal altamente personalizable, rápido y 
 curl -sS https://starship.rs/install.sh | sh
 ```
 
-#### **Oh My Posh - Prompt de shell personalizable para cualquier terminal**
+#### [Oh My Posh](https://ohmyposh.dev/) - Prompt de shell personalizable para cualquier terminal
 
 Configura **Oh My Posh**, un motor de prompts para shells que te permite personalizar por completo la apariencia de tu terminal. Muestra información contextual como rama Git, estado de comandos, versiones de lenguajes y más, con soporte para temas y colores en PowerShell, bash, zsh y otros.
 
@@ -170,7 +189,7 @@ Configura **Oh My Posh**, un motor de prompts para shells que te permite persona
 curl -s https://ohmyposh.dev/install.sh | bash -s -- -d /usr/local/bin
 ```
 
-#### **McFly - Reemplazo inteligente del historial de comandos**
+#### [McFly](McFly) - Reemplazo inteligente del historial de comandos
 
 Instala **mcfly**, que reemplaza el historial de comandos tradicional (`history`) con una interfaz de búsqueda tipo "fuzzy finder" y sugerencias inteligentes basadas en frecuencia y relevancia. Aprende de tus comandos más usados para hacer la navegación más eficiente.
 
@@ -178,7 +197,7 @@ Instala **mcfly**, que reemplaza el historial de comandos tradicional (`history`
 curl -LSfs https://raw.githubusercontent.com/cantino/mcfly/master/ci/install.sh | sh -s -- --git cantino/mcfly
 ```
 
-#### **cht.sh - Documentación y ejemplos de programación desde terminal**
+#### [cht.sh](https://cht.sh/) - Documentación y ejemplos de programación desde terminal
 
 Descarga el cliente de **cht.sh**, un servicio que proporciona ejemplos de código, "cheat sheets" y documentación accesible directamente desde la terminal. Perfecto para estudiantes que necesitan consultar rápidamente sintaxis o ejemplos de múltiples lenguajes.
 
@@ -190,7 +209,7 @@ curl -s https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh
 chmod +x cht.sh
 ```
 
-#### **bottom - Monitor de sistema con interfaz gráfica en terminal**
+#### [bottom](https://bottom.pages.dev/stable/) - Monitor de sistema con interfaz gráfica en terminal
 
 Descarga e instala **bottom** (`btm`), un monitor de recursos del sistema (CPU, memoria, disco, red, procesos) con una interfaz moderna y personalizable. Ofrece visualizaciones que facilitan entender el rendimiento del sistema.
 
@@ -202,7 +221,7 @@ curl -LO https://github.com/ClementTsang/bottom/releases/download/0.12.3/bottom_
 dpkg -i bottom_0.12.3-1_amd64.deb
 ```
 
-#### **pandoc - Conversor universal de formatos de documentos**
+#### [pandoc](https://pandoc.org/MANUAL.html) - Conversor universal de formatos de documentos
 
 Instala **pandoc**, una herramienta indispensable para convertir documentos entre múltiples formatos (Markdown, HTML, PDF, LaTeX, Word, etc.). Útil para estudiantes que necesitan generar documentación, informes o presentaciones desde archivos de texto plano.
 
@@ -214,7 +233,7 @@ curl -LO https://github.com/jgm/pandoc/releases/download/3.9/pandoc-3.9-1-amd64.
 dpkg -i pandoc-3.9-1-amd64.deb
 ```
 
-#### **fastfetch - Información del sistema minimalista y rápida**
+#### [fastfetch](https://github.com/fastfetch-cli/fastfetch) - Información del sistema minimalista y rápida
 
 Instala **fastfetch**, una alternativa más rápida y configurable a neofetch para mostrar información del sistema con logos ASCII. Ligero y altamente personalizable para mostrar solo la información que realmente importa.
 
@@ -226,7 +245,7 @@ curl -LO https://github.com/fastfetch-cli/fastfetch/releases/download/2.59.0/fas
 dpkg -i fastfetch-linux-amd64.deb
 ```
 
-#### **zellij - Multiplexor de terminal moderno con paneles y pestañas**
+#### [zellij](https://zellij.dev/) - Multiplexor de terminal moderno con paneles y pestañas
 
 Descarga y extrae **zellij**, un multiplexor de terminal con interfaz moderna que permite dividir paneles, crear pestañas y sesiones persistentes. Incluye características como modo "flotante" y plugins, siendo una alternativa contemporánea a tmux y screen.
 
@@ -234,7 +253,7 @@ Descarga y extrae **zellij**, un multiplexor de terminal con interfaz moderna qu
 curl -L https://github.com/zellij-org/zellij/releases/download/v0.43.1/zellij-x86_64-unknown-linux-musl.tar.gz | tar zxvf -
 ```
 
-#### **curlie - Interfaz amigable para curl con sintaxis de httpie**
+#### [curlie](https://rs.github.io/curlie/) - Interfaz amigable para curl con sintaxis de httpie
 
 Descarga y extrae **curlie**, que combina la facilidad de uso de `httpie` con el poder y ubicuidad de `curl`. Proporciona una sintaxis más intuitiva para hacer peticiones HTTP, ideal para estudiantes que están aprendiendo APIs web y servicios REST.
 
@@ -242,13 +261,14 @@ Descarga y extrae **curlie**, que combina la facilidad de uso de `httpie` con el
 curl -L https://github.com/rs/curlie/releases/download/v1.8.2/curlie_1.8.2_linux_amd64.tar.gz | tar zxvf -
 ```
 
-#### **usql - Cliente SQL universal con soporte para múltiples bases de datos**
+#### [usql](https://github.com/xo/usql) - Cliente SQL universal con soporte para múltiples bases de datos
 
 Descarga y extrae **usql**, un cliente de bases de datos que funciona con múltiples sistemas (PostgreSQL, MySQL, SQLite, SQL Server, Oracle, etc.) usando una interfaz unificada. Perfecto para estudiantes que trabajan con diferentes tecnologías de bases de datos.
 
 ```bash
 curl -L https://github.com/xo/usql/releases/download/v0.19.26/usql-0.19.26-linux-amd64.tar.bz2 | tar jxvf -
 ```
+
 #### Eliminar archivos de instalación
 
 ```bash
