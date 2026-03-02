@@ -4,7 +4,7 @@ Este repositorio contiene los archivos binarios, datasets y recursos necesarios 
 
 ## 1. Configurar Ubuntu 
 
-El documento [Ubuntu Setup](ubuntu_setup.md) contiene los comandos necesarios para configurar Ubuntu como un entorno de aprendizaje para computación.
+El documento [Ubuntu Setup](ubuntu_setup.md) contiene los comandos necesarios para instalar los paquetes necesarios para usar [Ubuntu](https://docs.ubuntu.com/) como una estación de aprendizaje para computación, lenguajes de programación, bases de datos, y demás.
 
 ## 2. Archivos de Práctica
 
