@@ -14,7 +14,24 @@ El documento [Ubuntu Setup](ubuntu_setup.md) contiene los comandos necesarios pa
 curl -L https://github.com/clubdecomputacion/lab-files/releases/download/cli/home.txz | tar Jxf -
 ```
 
----
+## 3. Videos
+
+#### [Cómo funciona Docker? explicación desde cero con Python](https://www.youtube.com/watch?v=eXnGSGXwfT0)
+
+- Código Python en el Video [`focker.py`](archivos/focker_no_doc.py)
+- Código Python documentado [`focker.py`](archivos/focker.py)
+
+Creación del directorio `container_fs` para el `chroot()`:
+
+```
+cd /home/usuario
+wget https://cloud-images.ubuntu.com/noble/current/noble-server-cloudimg-amd64-root.tar.xz
+mkdir container_fs
+cd container_fs
+tar Jxvf ../noble-server-cloudimg-amd64-root.tar.xz
+cd ..
+```
+Cambia `usuario` si tu usuario se llama diferente.
 
 ## Notas
 
