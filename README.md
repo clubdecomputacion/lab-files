@@ -4,7 +4,9 @@ Este repositorio contiene los archivos binarios, datasets y recursos necesarios 
 
 ## 1. Configurar Ubuntu 
 
-El documento [Ubuntu Setup](ubuntu_setup.md) contiene los comandos necesarios para instalar los paquetes necesarios para usar [Ubuntu](https://docs.ubuntu.com/) como una estación de aprendizaje para computación, lenguajes de programación, bases de datos, y demás.
+El documento [Ubuntu Setup](archivos/ubuntu_setup.md) contiene los comandos necesarios para instalar los paquetes necesarios para usar **Ubuntu 26.04 LTS** como una estación de aprendizaje para computación, lenguajes de programación, bases de datos, y demás.
+
+**Nota**: Para **Ubuntu 24.04 LTS** utiliza [Ubuntu Setup 24](archivos/ubuntu24_setup.md).
 
 ## 2. Archivos de Práctica
 
