@@ -1,4 +1,4 @@
-# Ubuntu 26.04 LTS
+# Ubuntu 24.04 LTS
 
 ## Actualizar lista de paquetes disponibles
 
@@ -32,19 +32,22 @@ sudo apt install -y \
     python3 python3-pip python3-venv \
     default-jdk default-jre \
     dotnet-sdk-10.0 aspnetcore-runtime-10.0 \
-    ruby lua5.4 rustc nodejs npm golang-go php \
-    mycli pgcli litecli usql \
+    ruby lua5.4 \
+    rustc nodejs npm \
+    golang-go \
+    php \
+    mycli pgcli litecli \
     ncal zip unzip rar unrar \
-    micro nano joe ne ne-doc jed tilde hexyl vim neovim \
+    nano joe ne ne-doc jed tilde hexyl vim neovim \
     git gh duf direnv progress \
-    zsh byobu tree fastfetch tealdeer cht.sh \
+    zsh byobu tree \
     lsd eza bat zoxide \
     htop btop bpytop glances gping \
-    fortunes fortunes-es figlet toilet cowsay lolcat \
-    hstr fzf fd-find fdclone ripgrep jq \
+    fortunes fortunes-es figlet toilet cowsay lolcat neofetch \
+    tldr hstr fzf fd-find fdclone ripgrep jq \
     wget httpie curl \
-    mc khal miller age starship \
-    socat pv stress-ng imagemagick 
+    mc khal miller \
+    socat pv stress-ng
 ```
 
 ```bash
@@ -70,10 +73,8 @@ sudo snap install kotlin --classic
 - [mycli](https://mycli.net/): Cliente de terminal para MySQL y MariaDB con autocompletado inteligente, resaltado de sintaxis y soporte para múltiples formatos de salida. Una alternativa moderna al cliente oficial `mysql`.
 - [pgcli](https://pgcli.com/): Cliente de terminal para PostgreSQL con autocompletado contextual (tablas, columnas, funciones) y resaltado de sintaxis. Construido sobre la misma base que mycli.
 - [litecli](https://litecli.com/): Cliente de terminal para SQLite con autocompletado, resaltado de sintaxis y navegación cómoda.
-- [usql](https://github.com/xo/usql): Cliente SQL universal con soporte para múltiples bases de datos (PostgreSQL, MySQL, SQLite, SQL Server, Oracle, etc.) usando una interfaz unificada. Perfecto para estudiantes que trabajan con diferentes tecnologías de bases de datos.
 - [ncal](https://manpages.ubuntu.com/manpages/noble/man1/cal.1.html): Muestra el Calendario en la terminal.
 - [zip/unzip](https://infozip.sourceforge.net/), [rar/unrar](https://manpages.ubuntu.com/manpages/noble/man1/unrar-nonfree.1.html): Herramientas para comprimir y descomprimir archivos en formatos ZIP y RAR.
-- [micro](https://micro-editor.github.io/): editor de texto intuitivo y fácil de usar para la terminal, con atajos de teclado similares a editores gráficos (Ctrl+S para guardar, Ctrl+Q para salir).
 - [nano](https://www.nano-editor.org/): Editor de texto minimalista para la terminal, conocido por su facilidad de uso y curva de aprendizaje casi nula. Viene preinstalado en la mayoría de distribuciones Linux.
 - [joe](https://joe-editor.sourceforge.io/): Editor de terminal con atajos de teclado similares a WordStar. Ligero y configurable, popular en los años 90.
 - [ne](https://ne.di.unimi.it/): *Nice Editor*, un editor de terminal potente pero sencillo, diseñado como alternativa más amigable a vi, con soporte para Unicode y grabación de macros.
@@ -90,9 +91,6 @@ sudo snap install kotlin --classic
 - [zsh](https://www.zsh.org/): Shell poderosa y altamente personalizable (base para frameworks como Oh My Zsh).
 - [byobu](https://www.byobu.org/): Interfaz mejorada para GNU Screen o Tmux, permitiendo múltiples sesiones en una terminal.
 - [tree](https://linux.die.net/man/1/tree): Muestra el árbol de directorios/archivos.
-- [fastfetch](https://github.com/fastfetch-cli/fastfetch): Obtiene información del sistema para mostrarla de forma visualmente atractiva.
-- [tealdeer](https://tealdeer-rs.github.io/tealdeer/): Implementación muy rápida de [`tldr`](https://tldr.sh/), muestra manuales simplificados con ejemplo, desarrollados por la comunidad. Actualiza los manuales con `tldr --update`.
-- [cht.sh](https://cht.sh/): Proporciona ejemplos de código, "cheat sheets" y documentación accesible directamente desde la terminal.
 - [lsd](https://github.com/lsd-rs/lsd), [eza](https://eza.rocks/): Reemplazos modernos para `ls` con iconos y mejor formato.
 - [bat](https://github.com/sharkdp/bat): Reemplazo de `cat` con resaltado de sintaxis, numeración y paginación.
 - [zoxide](https://github.com/ajeetdsouza/zoxide): Reemplazo inteligente de `cd` que aprende los directorios más usados.
@@ -102,6 +100,8 @@ sudo snap install kotlin --classic
 - [figlet](https://www.figlet.org/), [toilet](https://github.com/cacalabs/toilet): Crea letras grandes ASCII a partir de texto.
 - [cowsay](https://github.com/sckott/cowsay): Dibuja una vaca (u otros animales) que "dice" un mensaje.
 - [lolcat](https://github.com/busyloop/lolcat/): Añade arcoíris al texto.
+- [neofetch](https://github.com/dylanaraps/neofetch): Muestra información del sistema con un logo ASCII.
+- [tldr](https://tldr.sh/): Páginas de ayuda simplificadas con ejemplos prácticos.
 - [hstr](https://github.com/dvorka/hstr): Historial de comandos interactivo y buscable.
 - [fzf](https://github.com/junegunn/fzf), [fd-find](https://github.com/sharkdp/fd), [fdclone](https://github.com/knu/FDclone), [ripgrep](https://github.com/BurntSushi/ripgrep): Herramientas de búsqueda rápidas y eficientes.
 - [jq](https://jqlang.org/): Procesador de JSON desde línea de comandos.
@@ -110,12 +110,21 @@ sudo snap install kotlin --classic
 - [mc](https://midnight-commander.org/): Administrador de archivos en modo texto (Midnight Commander).
 - [khal](https://khal.readthedocs.io/en/latest/): Calendario y agenda en terminal.
 - [miller](https://miller.readthedocs.io/en/main/): Procesador de datos tipo CSV/JSON/XML similar a awk/sed.
-- [age](https://age-encryption.org/): Herramienta, formato y librería para encripción de archivos, sencillo, moderno y seguro.
-- [starship](https://starship.rs/): Prompt de terminal altamente personalizable, rápido y que muestra información contextual relevante (rama de Git, versión de Python/Node, etc.). 
 - [socat](https://github.com/lilydjwg/socat): Herramienta multipropósito de red (similar a netcat pero más potente).
 - [pv](https://github.com/icetee/pv): Monitor de progreso para tuberías de datos.
 - [stress-ng](https://github.com/ColinIanKing/stress-ng): Herramienta avanzada para someter el sistema a estrés (CPU, memoria, disco, red, etc.) y realizar pruebas de estabilidad, resistencia y benchmarking.
-- [imagemagick](https://imagemagick.org/): Software utilizado para crear, editar, componer o convertir imágenes en una amplia gama de formatos: JPEG, PNG, GIF, TIFF, Ultra HDR, etc.
+
+## Agregar repositorio externo (PPA) e instalar herramienta
+
+Primero agrega el PPA (Personal Package Archive) de [OneFetch](https://onefetch.dev) a la lista de fuentes de software del sistema, y luego instala la aplicación:
+
+```bash
+sudo add-apt-repository ppa:o2sh/onefetch
+```
+
+```bash
+sudo apt install -y onefetch 
+```
 
 ## Eliminar paquetes innecesarios.
 
@@ -157,12 +166,20 @@ Descarga y ejecuta el script de instalación de **croc**, una herramienta de lí
 curl https://getcroc.schollz.com | bash
 ```
 
-#### [curlie](https://rs.github.io/curlie/) - Interfaz amigable para curl con sintaxis de httpie
+#### [micro](https://micro-editor.github.io/) - Editor de texto moderno para terminal
 
-Descarga y extrae **curlie**, que combina la facilidad de uso de `httpie` con el poder y ubicuidad de `curl`. Proporciona una sintaxis más intuitiva para hacer peticiones HTTP, ideal para estudiantes que están aprendiendo APIs web y servicios REST.
+Instala **micro**, un editor de texto intuitivo y fácil de usar para la terminal, con atajos de teclado similares a editores gráficos (Ctrl+S para guardar, Ctrl+Q para salir). Ideal para estudiantes que están comenzando y encuentran otros editores demasiado complejos.
 
 ```bash
-curl -sS https://webinstall.dev/curlie | bash
+curl -L https://getmic.ro | bash
+```
+
+#### [Starship](https://starship.rs/) - Prompt de terminal personalizable y minimalista
+
+Instala **starship**, un prompt de terminal altamente personalizable, rápido y que muestra información contextual relevante (rama de Git, versión de Python/Node, etc.). Mejora la experiencia en terminal mostrando solo la información necesaria según el directorio actual.
+
+```bash
+curl -sS https://starship.rs/install.sh | sh
 ```
 
 #### [Oh My Posh](https://ohmyposh.dev/) - Prompt de shell personalizable para cualquier terminal
@@ -181,20 +198,16 @@ Instala **mcfly**, que reemplaza el historial de comandos tradicional (`history`
 curl -LSfs https://raw.githubusercontent.com/cantino/mcfly/master/ci/install.sh | sh -s -- --git cantino/mcfly
 ```
 
-#### [zellij](https://zellij.dev/) - Multiplexor de terminal moderno con paneles y pestañas
+#### [cht.sh](https://cht.sh/) - Documentación y ejemplos de programación desde terminal
 
-Descarga y extrae **zellij**, un multiplexor de terminal con interfaz moderna que permite dividir paneles, crear pestañas y sesiones persistentes. Incluye características como modo "flotante" y plugins, siendo una alternativa contemporánea a tmux y screen.
+Descarga el cliente de **cht.sh**, un servicio que proporciona ejemplos de código, "cheat sheets" y documentación accesible directamente desde la terminal. Perfecto para estudiantes que necesitan consultar rápidamente sintaxis o ejemplos de múltiples lenguajes.
 
 ```bash
-curl -LO https://github.com/zellij-org/zellij/releases/download/v0.44.3/zellij-x86_64-unknown-linux-musl.tar.gz | tar zxvf -
+curl -s https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh
 ```
 
-#### [onefetch](https://onefetch.dev/) - Información de un repositorio Git
-
-Descarga e instala **onefetch**, un comando que proporciona información de un repositorio Git y estadísticas del código directamente en la terminal.
-
 ```bash
-curl -L0 https://github.com/o2sh/onefetch/releases/latest/download/onefetch_amd64.deb && dpkg -i ./onefetch_amd64.deb
+chmod +x cht.sh
 ```
 
 #### [bottom](https://bottom.pages.dev/stable/) - Monitor de sistema con interfaz gráfica en terminal
@@ -202,7 +215,11 @@ curl -L0 https://github.com/o2sh/onefetch/releases/latest/download/onefetch_amd6
 Descarga e instala **bottom** (`btm`), un monitor de recursos del sistema (CPU, memoria, disco, red, procesos) con una interfaz moderna y personalizable. Ofrece visualizaciones que facilitan entender el rendimiento del sistema.
 
 ```bash
-curl -LO https://github.com/ClementTsang/bottom/releases/download/0.14.3/bottom_0.14.3-1_amd64.deb && dpkg -i bottom_0.14.3-1_amd64.deb
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.12.3/bottom_0.12.3-1_amd64.deb
+```
+
+```bash
+dpkg -i bottom_0.12.3-1_amd64.deb
 ```
 
 #### [pandoc](https://pandoc.org/MANUAL.html) - Conversor universal de formatos de documentos
@@ -210,7 +227,47 @@ curl -LO https://github.com/ClementTsang/bottom/releases/download/0.14.3/bottom_
 Instala **pandoc**, una herramienta indispensable para convertir documentos entre múltiples formatos (Markdown, HTML, PDF, LaTeX, Word, etc.). Útil para estudiantes que necesitan generar documentación, informes o presentaciones desde archivos de texto plano.
 
 ```bash
-curl -LO https://github.com/jgm/pandoc/releases/download/3.10/pandoc-3.10-1-amd64.deb && dpkg -i pandoc-3.10-1-amd64.deb 
+curl -LO https://github.com/jgm/pandoc/releases/download/3.9/pandoc-3.9-1-amd64.deb
+```
+
+```bash
+dpkg -i pandoc-3.9-1-amd64.deb
+```
+
+#### [fastfetch](https://github.com/fastfetch-cli/fastfetch) - Información del sistema minimalista y rápida
+
+Instala **fastfetch**, una alternativa más rápida y configurable a neofetch para mostrar información del sistema con logos ASCII. Ligero y altamente personalizable para mostrar solo la información que realmente importa.
+
+```bash
+curl -LO https://github.com/fastfetch-cli/fastfetch/releases/download/2.59.0/fastfetch-linux-amd64.deb
+```
+
+```bash
+dpkg -i fastfetch-linux-amd64.deb
+```
+
+#### [zellij](https://zellij.dev/) - Multiplexor de terminal moderno con paneles y pestañas
+
+Descarga y extrae **zellij**, un multiplexor de terminal con interfaz moderna que permite dividir paneles, crear pestañas y sesiones persistentes. Incluye características como modo "flotante" y plugins, siendo una alternativa contemporánea a tmux y screen.
+
+```bash
+curl -L https://github.com/zellij-org/zellij/releases/download/v0.43.1/zellij-x86_64-unknown-linux-musl.tar.gz | tar zxvf -
+```
+
+#### [curlie](https://rs.github.io/curlie/) - Interfaz amigable para curl con sintaxis de httpie
+
+Descarga y extrae **curlie**, que combina la facilidad de uso de `httpie` con el poder y ubicuidad de `curl`. Proporciona una sintaxis más intuitiva para hacer peticiones HTTP, ideal para estudiantes que están aprendiendo APIs web y servicios REST.
+
+```bash
+curl -L https://github.com/rs/curlie/releases/download/v1.8.2/curlie_1.8.2_linux_amd64.tar.gz | tar zxvf -
+```
+
+#### [usql](https://github.com/xo/usql) - Cliente SQL universal con soporte para múltiples bases de datos
+
+Descarga y extrae **usql**, un cliente de bases de datos que funciona con múltiples sistemas (PostgreSQL, MySQL, SQLite, SQL Server, Oracle, etc.) usando una interfaz unificada. Perfecto para estudiantes que trabajan con diferentes tecnologías de bases de datos.
+
+```bash
+curl -L https://github.com/xo/usql/releases/download/v0.19.26/usql-0.19.26-linux-amd64.tar.bz2 | tar jxvf -
 ```
 
 #### Eliminar archivos de instalación
@@ -220,9 +277,9 @@ rm *.deb README* LICENSE*
 exit
 ```
 
-## Personalizar fastfetch con Formato SIXEL
+## Personalizar neofetch con Formato SIXEL
 
-Estos comandos trabajan en conjunto para convertir una imagen al formato SIXEL (un formato de gráficos rasterizados compatible con terminales modernas) y luego utilizarla como logo personalizado en `fastfetch`.
+Estos comandos trabajan en conjunto para convertir una imagen al formato SIXEL (un formato de gráficos rasterizados compatible con terminales modernas) y luego utilizarla como logo personalizado en `neofetch`.
 
 #### **Convertir imagen PNG a formato SIXEL**
 
@@ -232,17 +289,11 @@ Utiliza la herramienta `convert` de ImageMagick para transformar una imagen en f
 convert image.png sixel:- > image.six
 ```
 
-#### **Usar imagen SIXEL como logo en fastfetch**
+#### **Usar imagen SIXEL como logo en neofetch**
 
-Seleccionar una imagen `.six` al azar desde el directorio `${HOME}/documentos/sixels`
-
-```bash
-export SIXEL=$(find ${HOME}/documentos/sixels -type f -name '*.six' | shuf -n 1)
-```
-
-Ejecuta **fastfetch** utilizando la imagen seleccionada en lugar del logo ASCII por defecto del sistema. La opción `--logo-type sixel` especifica la ruta del archivo SIXEL a mostrar, y `--logo-height 32` ajusta el ancho de la imagen. 
+Ejecuta **neofetch** utilizando la imagen convertida (`image.six`) como logo personalizado en lugar del logo ASCII por defecto del sistema. La opción `--sixel` especifica la ruta del archivo SIXEL a mostrar, y `--size 320px` ajusta el ancho de la imagen a 320 píxeles. Esto permite a los estudiantes personalizar completamente la apariencia de su neofetch con cualquier imagen, logotipo o arte ASCII convertido, añadiendo un toque único a su entorno de terminal.
 
 ```bash
-fastfetch --logo-type sixel --logo ${SIXEL} --logo-height 32
+neofetch --sixel image.six --size 320px
 ```
 
