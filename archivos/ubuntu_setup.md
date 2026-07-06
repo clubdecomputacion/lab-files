@@ -38,7 +38,7 @@ sudo apt install -y \
     micro nano joe ne ne-doc jed tilde hexyl vim neovim \
     git gh duf direnv progress \
     zsh byobu tree fastfetch tealdeer cht.sh \
-    lsd eza bat zoxide \
+    lsd eza bat glow zoxide \
     htop btop bpytop glances gping \
     fortunes fortunes-es figlet toilet cowsay lolcat \
     hstr fzf fd-find fdclone ripgrep jq \
@@ -95,6 +95,7 @@ sudo snap install kotlin --classic
 - [cht.sh](https://cht.sh/): Proporciona ejemplos de código, "cheat sheets" y documentación accesible directamente desde la terminal.
 - [lsd](https://github.com/lsd-rs/lsd), [eza](https://eza.rocks/): Reemplazos modernos para `ls` con iconos y mejor formato.
 - [bat](https://github.com/sharkdp/bat): Reemplazo de `cat` con resaltado de sintaxis, numeración y paginación.
+- [glow](https://github.com/charmbracelet/glow): Visor de archivos Markdown diseñado para renderizar documentos directamente en la terminal.
 - [zoxide](https://github.com/ajeetdsouza/zoxide): Reemplazo inteligente de `cd` que aprende los directorios más usados.
 - [htop](https://htop.dev/), [btop](https://github.com/aristocratos/btop), [bpytop](https://github.com/aristocratos/bpytop), [glances](https://nicolargo.github.io/glances/): Monitores de sistema con interfaces visuales mejoradas.
 - [gping](https://github.com/orf/gping): Herramienta de ping con gráficos en tiempo real.
