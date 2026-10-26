@@ -22,9 +22,27 @@ sudo apt upgrade -y
 
 ## Instalar paquetes específicos
 
-A continuación se presenta una selección de paquetes que proporcionan un entorno de desarrollo completo para aprender múltiples lenguajes, trabajar con diferentes herramientas profesionales, personalizar el entorno de trabajo y desarrollar habilidades con herramientas **CLI** modernas utilizadas en la industria. 
+### Entorno de Desarrollo - Solo `Python`
 
-Cada grupo satisface necesidades específicas del flujo de trabajo de desarrollo, desde la escritura de código hasta el monitoreo del sistema y la automatización de tareas.
+El siguiente comando instala lo necesario para trabajar con **Python**, incluyendo algunas herramientas **CLI** de uso básico:
+
+```bash
+sudo apt install -y \
+    build-essential manpages-dev just \
+    python3 python3-pip python3-venv \
+    mycli pgcli litecli usql \
+    ncal zip unzip rar unrar \
+    nano joe vim git gh direnv \
+    zsh tree fastfetch tealdeer cht.sh \
+    lsd bat htop hstr fzf ripgrep jq \
+    wget httpie curl
+```
+
+Recuerda instalar al menos **Oh My Posh**.
+
+### Entorno de Desarrollo Completo
+
+Para tener un entorno de desarrollo completo, con múltiples lenguajes de programación, diferentes herramientas profesionales de desarrollo, personalizar el entorno de trabajo y desarrollar habilidades con herramientas **CLI** modernas utilizadas en la industria, utiliza este comando: 
 
 ```bash
 sudo apt install -y \
@@ -52,6 +70,8 @@ sudo snap install kotlin --classic
 ```
 
 #### Paquetes
+
+Cada grupo satisface necesidades específicas del flujo de trabajo de desarrollo, desde la escritura de código hasta el monitoreo del sistema y la automatización de tareas.
 
 - **build-essential**: Paquete meta que incluye compiladores [C](https://informatica.uv.es/estguia/ATD/apuntes/laboratorio/Lenguaje-C.pdf)/[C++](https://www4.ujaen.es/~fmartin/apuntesC++.pdf) (`gcc`, `g++`), [`make`](https://makefiletutorial.com/) y otras herramientas esenciales para compilar software desde código fuente.
 - **manpages-dev**: Páginas del manual para funciones de desarrollo y programación en C.
